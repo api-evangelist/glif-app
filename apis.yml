@@ -94,7 +94,7 @@ common:
   type: Support
 - url: https://discord.gg/nuR9zZ2nsh
   name: Glif Discord
-  type: Forum
+  type: Forums
 - url: https://github.com/glifxyz
   name: Glif on GitHub
   type: GitHub
@@ -118,7 +118,7 @@ common:
   type: Tools
 - url: https://github.com/glifxyz/glif-client-python
   name: Glif Python Client
-  type: SDK
+  type: SDKs
 - url: https://github.com/glifxyz/glif-api-demo
   name: Glif API NextJS Demo
   type: SampleApps
