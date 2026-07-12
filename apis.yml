@@ -65,6 +65,10 @@ kind: company
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 common:
+- type: VulnerabilityDisclosure
+  url: security/glif-app-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/glif-app-domain-security.yml
 - url: https://glif.app
   name: Glif Homepage
   type: Portal
