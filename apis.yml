@@ -65,6 +65,10 @@ kind: company
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 common:
+- type: AgentCard
+  url: a2a/glif-app-a2a.yml
+  name: A2A Agent Card
+  description: Agent Card served at /.well-known/agent-card.json (flavored against A2A 1.0.0).
 - type: VulnerabilityDisclosure
   url: security/glif-app-vulnerability-disclosure.yml
 - type: DomainSecurity

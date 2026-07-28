@@ -1,0 +1,35 @@
+generated: '2026-07-28'
+method: probed
+source: https://glif.app/.well-known/agent-card.json
+description: 'A2A Agent Card observed at /.well-known/agent-card.json on glif.app. Grade is measured against
+  the A2A 1.0.0 AgentCard object: ''conformant'' passes every structural check, ''near-conformant'' is
+  correctly shaped but omits optional fields, ''flavored'' fails a hard check and is an agent card in
+  spirit rather than in schema. Provider-published by construction — served from the provider''s own host;
+  nothing here is derived or generated.'
+discovery:
+  path: /.well-known/agent-card.json
+  canonical: true
+  host: glif.app
+conformance:
+  spec: A2A 1.0.0
+  grade: flavored
+  protocol_version: null
+  preferred_transport: null
+  deviations:
+  - no-protocolVersion
+  - no-preferredTransport
+card:
+  name: Glif
+  description: Project-based media-generation agent. Calling agents create or continue Glif projects in
+    natural language; Glif picks models, native tools, and multi-step workflows server-side.
+  url: https://glif.app/api/mcp
+  version: 0.1.0
+  documentation_url: https://glif.app/llms.txt
+  skills: 3
+  file: glif-app-agent-card.json
+x-evidence:
+  fetched: '2026-07-28'
+  url: https://glif.app/.well-known/agent-card.json
+  http_status: 200
+  content_type: application/json
+  note: Verbatim body saved alongside this manifest. No field inferred.

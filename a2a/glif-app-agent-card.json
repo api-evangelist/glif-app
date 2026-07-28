@@ -1,0 +1,93 @@
+{
+  "name": "Glif",
+  "description": "Project-based media-generation agent. Calling agents create or continue Glif projects in natural language; Glif picks models, native tools, and multi-step workflows server-side.",
+  "version": "0.1.0",
+  "url": "https://glif.app/api/mcp",
+  "documentationUrl": "https://glif.app/llms.txt",
+  "capabilities": {
+    "streaming": true,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "defaultInputModes": [
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "text/plain",
+    "image/*",
+    "video/*",
+    "audio/*"
+  ],
+  "securitySchemes": {
+    "glif_oauth": {
+      "type": "oauth2",
+      "description": "OAuth 2.1 authorization-code grant with PKCE (S256), served by better-auth's MCP authorization server.",
+      "flows": {
+        "authorizationCode": {
+          "authorizationUrl": "https://glif.app/api/auth/mcp/authorize",
+          "tokenUrl": "https://glif.app/api/auth/mcp/token",
+          "scopes": {
+            "openid": "Authenticate with Glif",
+            "profile": "Use the Glif MCP server on behalf of the user"
+          }
+        }
+      },
+      "x-oauth-metadata": "https://glif.app/api/mcp/.well-known/oauth-authorization-server"
+    }
+  },
+  "security": [
+    {
+      "glif_oauth": [
+        "openid",
+        "profile"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": "projects",
+      "name": "Projects",
+      "description": "Compose durable Glif projects with `compose_project`, continue via `project_id`, inspect state and generated media with `get_project`. `compose_project` returns a task id immediately; poll `get_job_status` for the finished media.",
+      "tags": [
+        "projects",
+        "media-generation",
+        "agent",
+        "assets"
+      ],
+      "examples": [
+        "make me a moody black-and-white portrait of a sloth in a noir detective hat",
+        "generate a 5-second video of a paper airplane gliding across a sunset cityscape",
+        "continue project sim_abc and make the previous image darker with rain"
+      ]
+    },
+    {
+      "id": "assets",
+      "name": "Assets",
+      "description": "`upload_file` ingests image/video/audio for use as references; generated media comes back as `resource_link` blocks and via `get_project`.",
+      "tags": [
+        "assets",
+        "upload",
+        "image",
+        "video",
+        "audio"
+      ]
+    },
+    {
+      "id": "user-skills",
+      "name": "User-owned skills",
+      "description": "`list_user_skills` and `get_user_skill` expose the authenticated user's personal skills only. Global Glif skills stay internal.",
+      "tags": [
+        "skills",
+        "personalization"
+      ]
+    }
+  ],
+  "protocols": [
+    {
+      "kind": "mcp",
+      "name": "glif",
+      "url": "https://glif.app/api/mcp",
+      "description": "Fixed MCP surface: compose_project (async-capable), get_project, list_projects, user-skill tools, upload_file, whoami."
+    }
+  ]
+}
