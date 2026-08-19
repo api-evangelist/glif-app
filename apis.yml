@@ -1,5 +1,6 @@
 aid: glif-app
 url: https://raw.githubusercontent.com/api-evangelist/glif-app/refs/heads/main/apis.yml
+specificationVersion: '0.23'
 apis:
 - aid: glif-app:glif-simple-api
   name: Glif Simple API
