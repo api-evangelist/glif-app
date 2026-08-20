@@ -5,6 +5,12 @@ apis:
 - aid: glif-app:glif-simple-api
   name: Glif Simple API
   tags:
+  - Artificial Intelligence
+  - Workflows
+  - Glifs
+  - No-Code
+  - Deprecated
+  tags_raw:
   - AI
   - Artificial Intelligence
   - Workflows
@@ -28,6 +34,13 @@ apis:
 - aid: glif-app:glif-rest-api
   name: Glif REST API
   tags:
+  - Artificial Intelligence
+  - Workflows
+  - Glifs
+  - Glif Runs
+  - Spheres
+  - Deprecated
+  tags_raw:
   - AI
   - Artificial Intelligence
   - Workflows
@@ -51,6 +64,17 @@ apis:
     Simple API as Glif retired the workflow-builder surface in favor of the chat-based agent.
 name: Glif
 tags:
+- Artificial Intelligence
+- No-Code
+- Workflows
+- Creative AI
+- Generative AI
+- Video Generation
+- Image-Generation
+- ComfyUI
+- MCP
+- LLM Apps
+tags_raw:
 - AI
 - Artificial Intelligence
 - No-Code
