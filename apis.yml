@@ -189,6 +189,8 @@ common:
 - url: https://pitchbook.com/profiles/company/535615-03
   name: Glif on PitchBook
   type: CompanyProfile
+- type: Contact
+  url: mailto:contact@glif.xyz
 description: Glif is a creative AI platform from Spellcasters, Inc. — originally launched in 2023 as a
   no-code visual workflow builder for chaining text, image, audio, and video models into shareable
   "glifs", and re-launched in March 2026 as Glif 2.0, a single chat-based AI agent with access to 100+
