@@ -24,6 +24,9 @@ accessModel:
   generated: '2026-09-02'
   method: derived
 specificationVersion: '0.23'
+x-docs-platform: gitbook
+x-docs-platform-confidence: high
+x-docs-platform-checked: 2026-10-03
 apis:
 - aid: glif-app:glif-simple-api
   name: Glif Simple API
@@ -93,10 +96,11 @@ tags:
 - Creative AI
 - Generative AI
 - Video Generation
-- Image-Generation
+- Image Generation
 - ComfyUI
 - MCP
 - LLM Apps
+- A2A
 tags_raw:
 - AI
 - Artificial Intelligence
@@ -109,6 +113,8 @@ tags_raw:
 - ComfyUI
 - MCP
 - LLM Apps
+- Image-Generation
+- A2A
 kind: company
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 access: 3rd-Party
