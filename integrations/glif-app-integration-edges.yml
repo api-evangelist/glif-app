@@ -14,7 +14,7 @@ edges:
     registered_name: app.glif/glif
     register_id: app.glif/glif
     detected_by: sweep-agent-tools.py
-    detected: '2026-10-14'
+    detected: '2026-10-15'
   mcp_registry:
     servers:
     - app.glif/glif
@@ -30,7 +30,79 @@ edges:
   - namespace-domain
   detected_by: sweep-agent-tools.py
   first_seen: '2026-10-14'
+- partner_name: A2A protocol (own Agent Card)
+  partner: null
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: A2A agent
+  evidence: https://glif.app/.well-known/agent-card.json
+  channel: provider-built
+  relationship: compatible
+  shape: a2a
+  evidence_kind: own-wellknown
+  degree: flavored
+  report_only: true
+  a2a_card:
+    grade: flavored
+    verdict: flavored
+    protocol_version: null
+    deviations:
+    - no-protocolVersion
+    card_subject: api
+  contract_reference:
+    register: provider's own /.well-known/agent-card.json
+    spec_file: null
+    standard: A2A
+    role: a2a-agent-card
+    registered_name: Glif
+    organization: null
+    matched_domain: glif.app
+    matched_by: own-domain
+    detected_by: sweep-ai-agents.py
+    detected: '2026-10-15'
+  detected_by: sweep-ai-agents.py
+  first_seen: '2026-10-15'
+- partner_name: a2aregistry.org
+  partner: null
+  partner_match: register
+  type: register
+  direction: partner-built
+  category: A2A agent registry
+  evidence: https://a2aregistry.org/api/agents/945df23a-0e51-40f4-aff9-3d85df00d44f
+  channel: standard-directory
+  relationship: compatible
+  shape: a2a
+  evidence_kind: register-listing
+  degree: listed
+  report_only: true
+  a2a_register:
+    hosts:
+    - glif.app
+    conformance: true
+    task_conformance_working: false
+    healthy: true
+    signal_note: booleans over the provider's hosts; listings are context, never read
+  contract_reference:
+    register: a2aregistry.org /api/agents
+    spec_file: null
+    standard: A2A
+    role: a2a-registry-listing
+    registered_name: Unknown
+    matched_domain: glif.app
+    matched_by: domain
+    matched_via: card-host
+    listings_context: 1
+    sample_agents:
+    - Glif
+    detected_by: sweep-ai-agents.py
+    detected: '2026-10-15'
+  detected_by: sweep-ai-agents.py
+  first_seen: '2026-10-15'
 generated: '2026-10-14'
 method: searched
 checked:
+- https://a2aregistry.org/api/agents
 - https://registry.modelcontextprotocol.io/v0/servers
+source:
+- https://a2aregistry.org/api/agents
